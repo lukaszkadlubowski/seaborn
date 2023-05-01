@@ -970,7 +970,7 @@ class VectorPlotter:
         variables = {
             var: name
             for var, name in variables.items()
-            if plot_data[var].notnull().any()
+            if plot_data[var].notnull().any() or var == 'y'
         }
 
         return plot_data, variables
